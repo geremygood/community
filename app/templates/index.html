@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Curated by {{ user.nickname }}</h1>
+    <ul>
+    {% for event in events %}
+        <li>
+            <h2>{{ event.name }}</h2>
+            <p>Hosted by {{ event.host.name }} </p>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock content %}

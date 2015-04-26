@@ -1,0 +1,18 @@
+<html>
+    <head>
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>Community Building</title>
+    {% endif %}
+    </head>
+    <body>
+        <nav id="navigation">
+            <a href="/index">Home</a>
+        </nav>
+
+        {% block content %}
+        {% endblock content %}
+
+    </body>
+</html>
