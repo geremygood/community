@@ -7,9 +7,19 @@
     {% endif %}
     </head>
     <body>
-        <nav id="navigation">
+        <nav class="navigation">
             <a href="/index">Home</a>
         </nav>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="validation-messages">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
 
         {% block content %}
         {% endblock content %}
